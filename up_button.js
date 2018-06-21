@@ -1,8 +1,6 @@
 var this_js_script = $('script[src*=up_button]');
 var img = this_js_script.attr('data-img');   
 var imgsrc = this_js_script.attr('data-link');
-console.log(imgsrc);
-console.log(img);
 if (typeof img === "undefined") {var img = '00';}
 if (typeof imgsrc === "undefined" ){
 	linksrc = '<img src="https://raw.githubusercontent.com/SerhiiKotliarov/knopkavverh/master/'+ img +'.png" style="width:48px; height:48px" title="Вверх" alt="Вверх"/>';

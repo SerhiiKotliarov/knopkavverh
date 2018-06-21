@@ -1,15 +1,15 @@
 var this_js_script = $('script[src*=up_button]');
 var img = this_js_script.attr('data-img');   
 var imgsrc = this_js_script.attr('data-src');   
-if (typeof img === "undefined" ) {var img = '00';}
+if (typeof img ) {var img = '00';}
 
 var scrolltotop={
 	setting: {startline:100, scrollto: 0, scrollduration:1000, fadeduration:[500, 100]},
-	if (imgsrc != "undefined"){
-		controlHTML: '<img src="' + imgsrc + '" style="width:48px; height:48px" title="Вверх" alt="Вверх"/>',
+	if (typeof imgsrc === "undefined" ){
+		controlHTML: '<img src="https://raw.githubusercontent.com/SerhiiKotliarov/knopkavverh/master/'+ img +'.png" style="width:48px; height:48px" title="Вверх" alt="Вверх"/>',
 	}
 	else {
-		controlHTML: '<img src="https://raw.githubusercontent.com/SerhiiKotliarov/knopkavverh/master/'+ img +'.png" style="width:48px; height:48px" title="Вверх" alt="Вверх"/>',
+		controlHTML: '<img src="' + imgsrc + '" style="width:48px; height:48px" title="Вверх" alt="Вверх"/>',
 	}
 	
 	controlattrs: {offsetx:5, offsety:5}, 
